@@ -1,81 +1,42 @@
-<div align="center">
-  <img src="other_files/Logo_3.png" alt="Other-Mine-Projects Website Screenshot" width="1000">
-</div>
+# all-my-little-works
+## О чём это
 
-## Other-Mine-Projects
+Это просто коллекция моих пет-проектов на Python.  
+Тут нет ничего сверхъестественного, но каждый файл — это маленькая история о том, как я пробовал, экспериментировал или просто убивал время с пользой.
 
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![Developer](https://img.shields.io/badge/Dev-waratecs123-blue.svg)
-![Status](https://img.shields.io/badge/Maintained-When%20time%20permits-blue.svg)
+Некоторые вещи реально работают, некоторые — просто демонстрация мысли.  
+Но все они — часть моего пути.
 
-### [>> Website <<](https://other-mine-projects.pages.dev/)
-### [>> Website (Alternative Link) <<](https://waratecs123.github.io/Other-Mine-Projects/)
+## Что внутри
 
-This repository contains a collection of Python applications and utilities developed to demonstrate various programming paradigms, algorithmic solutions, and software development practices. The projects included here are not basic in nature, despite their relatively small size, and serve as an educational resource and code library for computational problems and interactive applications.
+1. **Слот-машина** — почти как в казино, но без денег. Анимация, джекпоты, статистика и немного азарта в консоли.
+2. **Переводчик** — туда-сюда между русским и китайским. Голос, буфер обмена, обработка пачками. Удобно, когда лень гуглить.
+3. **30 задач** — от простых до средних. Просто, чтобы мозг не ржавел.
+4. **Геометрическая библиотека** — круги, треугольники, многоугольники. Всё считает, всё проверяет.
+5. **Мониторинг системы** — смотрит на процессор, память, диск, видео. Полезно, когда думаешь, что комп тормозит.
+6. **Ассистент** — набор команд для работы, развлечения и всякой мелочи. Расширяется, если захотеть.
+7. **И ещё много всего** — смотри в папках, там есть что посмотреть.
 
-### Website Screenshot
+## Технические детали
 
-<div align="center">
-  <img src="other_files/website_2.png" alt="Other-Mine-Projects Website Screenshot" width="1000">
-</div>
+- **Язык:** Python 3.8+
+- **Внешние библиотеки:** минимум. Что-то из `requests`, `psutil`, `gTTS`, `pydub`, `googletrans` — ставится одной командой.
+- **Графика:** где надо — Tkinter.
+- **Главное правило:** работает везде, где работает Python.
 
-### Projects
+## Как запустить
 
-1. **Advanced Casino Slot Machine System (slot_machine.py).**
-A casino-style slot machine simulation featuring real-time animation, multi-tiered symbols, dynamic jackpots, theme management, game state persistence, and statistical analytics. Implemented using object-oriented architecture with tkinter for the graphical user interface.
+```bash
+git clone https://github.com/just-not-google/all-my-little-works.git
+cd all-my-little-works
+python имя_файла.py
+```
 
-2. **Professional Translation Application (TRANSLATER.py).** 
-A bilingual translation platform supporting Russian-Chinese translations with bidirectional functionality, speech synthesis, clipboard management, bulk text processing, and audio export. Utilizes modular design and asynchronous processing.
+Каждый скрипт — сам по себе. Открывай и запускай.
 
-3. **Algorithmic Problem Suite (Basic tasks.py, Basic tasks.txt).**  
-   A suite of 30 fundamental programming challenges covering mathematical computations, string processing, data structure operations, and algorithmic tasks such as prime detection, palindrome verification, and sorting implementations.
+## Лицензия
 
-4. **Geometric Computation Library (class_objects.py).**
-   A library for calculating properties of geometric shapes, including circles, polygons, triangles, quadrilaterals, and ellipses. Features input validation, inheritance-based hierarchy, and precise computations using the math library.
-
-5. **System Monitoring Application (monitoring_app_system.py).** 
-   A diagnostic tool for monitoring hardware components, including CPU, memory, GPU, storage, and system information. Employs multi-threaded data collection and real-time refresh capabilities.
-
-6. **Intelligent Assistant Framework (assistant.py, data.py).** 
-   A command-based assistant system with modules for system operations, computational tools, entertainment features, and productivity utilities. Supports plugin extensions and graphical user interface with command history.
-
-7. **And many other projects (see the repository files)**
-
-### Technical Specifications
-
-- *Language*: Python 3.8 or higher.  
-- *Dependencies*: Minimal external libraries, including requests, psutil, gTTS, pydub, speedtest, and googletrans. Install via pip install -r requirements.txt if a requirements file is provided.  
-- *Framework*: Tkinter for graphical user interfaces where applicable.  
-- *Compatibility*: Cross-platform, with modular architecture for extensibility.
-
-### Installation
-
-1. Clone the repository:  
-   
-   git clone https://github.com/waratecs123/Other-Mine-Projects.git
-     
-2. Navigate to the project directory:  
-   
-   cd Other-Mine-Projects
-     
-3. Install dependencies (if applicable):  
-   
-   pip install -r requirements.txt
-   
-
-### Usage
-
-Each project is self-contained and can be executed independently. For example:  
-
-python slot_machine.py
-  
-Refer to individual source files for detailed comments and usage instructions.
-
-### License
-
-This repository is licensed under the MIT License. See the LICENSE file for details.
+MIT — делай что хочешь, только не забывай про автора.
 
 
-<div align="center">
-  <img src="other_files/ai.jpg" alt="Other Mine Projects Screenshot" width="500">
-</div>
+> *«Сделано от скуки, может, пригодится.»*
