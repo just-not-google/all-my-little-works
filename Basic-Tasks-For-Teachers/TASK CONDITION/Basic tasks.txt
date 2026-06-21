@@ -1,0 +1,147 @@
+1. The sum of two numbers
+Given a and b. Return a + b.
+
+-------------------------------------------------
+
+2. Maximum of two numbers
+Given a and b. Return the largest one.
+
+-------------------------------------------------
+
+3. The factorial of a number
+Given n. Calculate n!.
+
+-------------------------------------------------
+
+4. Even or odd
+Given n. Return True if it is even, otherwise False.
+
+-------------------------------------------------
+
+5. The sum of the numbers from 1 to N
+Given n. Return the sum of 1 + 2 + ... + n.
+
+-------------------------------------------------
+
+6. Find the minimum in the list
+A list of numbers is given. Return the minimum.
+
+-------------------------------------------------
+
+7. Counting characters in a string
+The string s is given. Return the dictionary with the number of each character.
+
+-------------------------------------------------
+
+8. Line reversal
+The string s is given. Return it in reverse order.
+
+-------------------------------------------------
+
+9. Checking for a palindrome
+The string s is given. Return True if it is a palindrome.
+
+-------------------------------------------------
+
+10. Squares of numbers
+Given n. Return the list of squares of numbers from 1 to n.
+
+-------------------------------------------------
+
+11. Counting vowels
+The string s is given. Return the number of vowels.
+
+-------------------------------------------------
+
+12. The average value of the list
+A list of numbers is given. Return the arithmetic mean.
+
+-------------------------------------------------
+
+13. Filtering even numbers
+A list of numbers is given. Return only even numbers.
+
+-------------------------------------------------
+
+14. Checking a prime number
+Given n. Return True if the number is prime.
+
+-------------------------------------------------
+
+15. Combining two lists
+Two lists are given. Return one combined one.
+
+-------------------------------------------------
+
+16. Searching for the element index
+The list and element x are given. Return the index x or -1.
+
+-------------------------------------------------
+
+17. Removing duplicates
+The list is given. Return a new list without duplicates.
+
+-------------------------------------------------
+
+18. Counting words per line
+The string is given. Return the number of words.
+
+-------------------------------------------------
+
+19. Substring replacement
+The string s, old, and new are given. Replace all the old ones with new ones.
+
+-------------------------------------------------
+
+20. Checking for anagram
+Two lines are given. Return True if they are anagrams.
+
+-------------------------------------------------
+
+21. List Reversal
+The list is given. Return it in reverse order.
+
+-------------------------------------------------
+
+22. Counting element occurrences
+The list and element x are given. Return the number of times x occurs.
+
+-------------------------------------------------
+
+23. String concatenation
+Two lines are given. Bring them back together.
+
+-------------------------------------------------
+
+24. Node search (Euclid's algorithm)
+is given by a and b. Return their greatest common divisor.
+
+-------------------------------------------------
+
+25. Fibonacci numbers
+Given n. Return the nth Fibonacci number.
+
+-------------------------------------------------
+
+26. The sum of the digits of a number
+A number is given. Return the sum of its digits.
+
+-------------------------------------------------
+
+27. Checking the power of two
+Given n. Return True if n is a power of two.
+
+-------------------------------------------------
+
+28. Generating prime numbers
+Given n. Return all the primes up to n.
+
+-------------------------------------------------
+
+29. Searching for a missing number
+A list of numbers from 1 to n is given, omitting one. Find him.
+
+-------------------------------------------------
+
+30. Checking for an ascending list
+The list is given. Return True if it is strictly increasing.
