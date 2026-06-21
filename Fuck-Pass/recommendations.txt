@@ -1,0 +1,47 @@
+STRONG PASSWORD CREATION RULES
+Core Modern Principles
+======================================================
+1) Length + True Randomness = Main Source of Strength
+    Total length and real entropy matter far more than using dozens of special characters.
+2) Minimum Acceptable Level Today
+    ~75–80 bits of entropy
+    Roughly equals:
+        1. 5 truly random words + at least 1–2 extra characters
+        2. or 19–21 completely random characters
+3) Recommended Comfortable Level (what most security-aware people actually use)
+    1. 85–100 bits
+    2. Usually achieved with:
+    3. 5–6 random words + separators + a few digits/symbols
+4) Leetspeak Substitutions Add Almost Nothing
+    l→1, o→0, a→@, s→$, e→3 etc.
+    Modern cracking tools try all popular substitutions first – they give very little extra strength.
+5) Avoid Predictable Appendages
+    Worst possible endings that add almost zero strength:
+        1. 123, !, !!, .!, #123, year numbers, etc.
+        2. If you use digits/symbols – spread them throughout the password.
+6) Separators Are Your Best Friend
+    Most convenient and effective ones right now: . _ = + ~ * # | !
+7) Words Must Be Truly Random and Unrelated
+    1. Bad: seasons, rainbow colors, weekdays, famous phrases
+    2. Good: completely unrelated, randomly chosen words
+8) Word Length Matters
+    Medium and long words (6–10 letters) are much more convenient and slightly stronger than many very short 3–4 letter words.
+9) Best Places for Digits and Symbols
+    Worst: only at the very beginning or very end
+    Best practices:
+        1. between words
+        2. inside words (breaking patterns)
+        3. scattered in different positions
+10) Most Dangerous Myths Right Now
+    1. "More special characters = stronger" → false, length wins
+    2. "Must have uppercase + lowercase + digit + symbol" → almost useless requirement today
+    3. "18 characters with everything is always strong" → not true if it's a patterned or predictable string
+
+Quick “Is This Password Strong Enough?” Checklist:
+======================================================
+1) Length ≥ 20 characters or ≥ 5 words
+2) No obvious patterns or leetspeak replacements
+3) Contains at least 2 different separators/symbols
+4) Words are random and not from the same logical group
+5) No personal information (name, birthdate, phone, pet, etc.)
+6) Password has never been used anywhere before
