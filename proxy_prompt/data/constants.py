@@ -1,0 +1,3 @@
+GOOGLE = "google"
+TOXICITY_VALUE = 0.7
+ENG_TARGET = "en"
