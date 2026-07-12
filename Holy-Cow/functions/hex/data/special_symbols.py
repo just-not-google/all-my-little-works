@@ -1,0 +1,1 @@
+special_symbols = "0123456789ABCDEFabcdef"
