@@ -1,0 +1,10 @@
+{
+    "EMAIL_DOMAINS": [
+        "mail.ru", "yandex.ru", "rambler.ru", "inbox.ru", "list.ru", "bk.ru", "ya.ru", "yandex.com",
+        "yandex.by", "yandex.kz", "yandex.ua", "mail.ua", "mail.by", "mail.kz", "internet.ru",
+        "rambler.ua", "ro.ru", "lenta.ru", "myrambler.ru", "autorambler.ru", "msu.ru", "spbu.ru",
+        "bmstu.ru", "mipt.ru", "hse.ru", "edu.ru", "ac.ru", "russian.ru", "ru.net", "com.ru", "net.ru",
+        "org.ru", "pp.ru", "fromru.com", "front.ru", "nightmail.ru", "smtp.ru", "pochta.ru", "email.ru",
+        "hotmail.ru", "gmail.ru", "qip.ru", "aif.ru", "km.ru", "xpress.ru"
+    ]
+}
