@@ -1,0 +1,2 @@
+MIN_PERC = 0
+MAX_PERS = 100
