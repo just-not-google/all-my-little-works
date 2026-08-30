@@ -1,3 +1,6 @@
+<p align="center">  
+  <img src="imgs/all_my_little_works.png" width="100%" alt="All-My-Little-Works Start" />  
+</p> 
 
 # all-my-little-works
 
