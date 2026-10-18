@@ -1,0 +1,448 @@
+<!--This code was made entirely using DeepSeek Coder.-->
+<!--Link to the model: https://huggingface.co/collections/deepseek-ai/deepseek-coder-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BiNeuron</title>
+  <link rel="icon" type="image/x-icon" href="img_files/logo.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="img_files/logo.ico">
+  <link rel="apple-touch-icon" href="img_files/logo.ico">
+<link rel="stylesheet" href="website/style.css">
+<script>
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+(function forceTop() {
+  if (window.location.hash) {
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+  }
+  window.scrollTo(0, 0);
+  window.addEventListener("load", function () {
+    window.scrollTo(0, 0);
+  });
+})();
+</script>
+</head>
+<body>
+
+<div class="bg-binary" aria-hidden="true">
+  <canvas id="binaryCanvas"></canvas>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">BiNeuron</a>
+    <nav class="nav-links">
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#download" data-i18n="nav_download">Download</a>
+      <a href="https://github.com/just-not-google/BiNeuron/tree/main/docs" data-i18n="nav_docs">Docs</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-switch">
+        <button data-lang="en" class="active">EN</button>
+        <button data-lang="ru">RU</button>
+        <button data-lang="zh">中文</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <h1 data-i18n="hero_title">The safest local AI for your code</h1>
+      <p class="hero-sub" data-i18n="hero_sub">
+        BiNeuron runs entirely on your machine by default. Your files, prompts, translations, and chat history never leave your computer. No telemetry, no tracking, no forced network calls. Cloud is opt-in only, and only when you enable it.
+      </p>
+      <div class="hero-actions">
+        <a href="#download" class="btn btn-primary" data-i18n="btn_download">Download for free</a>
+        <a href="https://github.com/just-not-google/BiNeuron" class="btn btn-secondary" data-i18n="btn_github">View on GitHub</a>
+      </div>
+      <div class="hero-image">
+        <img src="img_files/gui_screenshot_4.png" alt="BiNeuron">
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="about_title">Why BiNeuron is the safest</h2>
+      <p class="section-sub" data-i18n="about_text">
+        A local-first AI assistant where every design decision prioritizes security, privacy, and control. Nothing reaches the network unless you say so.
+      </p>
+
+      <div class="features">
+        <div class="feature">
+          <h3 data-i18n="f1_title">100% Local by Default</h3>
+          <p data-i18n="f1_text">GGUF models run entirely on your machine. No API keys, no accounts, no telemetry. Nothing leaves your computer unless you explicitly enable cloud mode.</p>
+        </div>
+        <div class="feature">
+          <h3 data-i18n="f2_title">No Telemetry, No Trackers</h3>
+          <p data-i18n="f2_text">Zero analytics, zero tracking pixels, zero background pings. BiNeuron runs perfectly with the network cable unplugged.</p>
+        </div>
+        <div class="feature">
+          <h3 data-i18n="f3_title">Sandboxed File Access</h3>
+          <p data-i18n="f3_text">Files are only read when you point BiNeuron at them. Automatic editing and deletion are off by default and must be enabled per session.</p>
+        </div>
+        <div class="feature">
+          <h3 data-i18n="f4_title">Local OCR and Parsing</h3>
+          <p data-i18n="f4_text">Extracts text from PDF, DOCX, ODF, PPTX, XLSX, EPUB, MOBI, FB2 and images locally via EasyOCR, or through your own private DeepSeek OCR key.</p>
+        </div>
+        <div class="feature">
+          <h3 data-i18n="f5_title">Virtual Storage, No Uploads</h3>
+          <p data-i18n="f5_text">Point BiNeuron at a folder. Files are read directly from your disk into the analysis context. Nothing is copied, uploaded, or cached outside your machine.</p>
+        </div>
+        <div class="feature">
+          <h3 data-i18n="f6_title">Opt-in Cloud, Never Automatic</h3>
+          <p data-i18n="f6_text">Cloud inference through LiteLLM is strictly manual. Nothing is sent to any provider until you enter a cloud model name and your own API key.</p>
+        </div>
+        <div class="feature">
+          <h3 data-i18n="f7_title">Inspect Everything Before Sending</h3>
+          <p data-i18n="f7_text">Preview the full system prompt, translated request, file context, and attached file list. See exactly what would leave your machine, byte for byte.</p>
+        </div>
+        <div class="feature">
+          <h3 data-i18n="f8_title">Encrypted Chat History</h3>
+          <p data-i18n="f8_text">Protect conversations with a master password using Fernet and PBKDF2 with 200,000 iterations. Three wrong attempts wipe the key permanently.</p>
+        </div>
+        <div class="feature">
+          <h3 data-i18n="f9_title">Anonymize and Filter</h3>
+          <p data-i18n="f9_text">Strip personal data with Microsoft Presidio and filter sensitive content before anything reaches a model. Both filters run entirely on your machine.</p>
+        </div>
+        <div class="feature">
+          <h3 data-i18n="f10_title">No Forced Network Calls</h3>
+          <p data-i18n="f10_text">Proxies, mirrors, and network access are entirely under your control. BiNeuron never contacts any server unless you explicitly allow it.</p>
+        </div>
+        <div class="feature">
+          <h3 data-i18n="f11_title">Fully Offline Translation</h3>
+          <p data-i18n="f11_text">Use Google Translate, DeepL, or fully offline ArgosTranslate. ArgosTranslate mode makes zero network requests at all.</p>
+        </div>
+        <div class="feature">
+          <h3 data-i18n="f12_title">Hardened Interface</h3>
+          <p data-i18n="f12_text">Master password lock, opt-in file editing, explicit cloud fallback, and 24 dark themes with no external fonts, no CDN, and no third-party assets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-i18n="download_title">Download BiNeuron</h2>
+      <p class="section-sub" data-i18n="download_text">
+        Free and open source. No accounts, no sign-ups, no telemetry. Verify the code, build it yourself, and run a local AI on your own machine in under five minutes.
+      </p>
+
+      <div class="download-grid">
+        <div class="download-card">
+          <div class="os-name">Windows</div>
+          <div class="os-note" data-i18n="dl_win">.exe installer</div>
+          <div class="os-desc" data-i18n="dl_win_desc">Windows 10 and 11, 64 bit</div>
+          <a href="https://github.com/just-not-google/BiNeuron/releases/download/v0.0.5/BiNeuron-Web-Windows.zip" class="btn btn-primary download-btn" data-i18n="dl_btn">Download</a>
+        </div>
+        <div class="download-card">
+          <div class="os-name">macOS</div>
+          <div class="os-note" data-i18n="dl_mac">.dmg package</div>
+          <div class="os-desc" data-i18n="dl_mac_desc">Apple Silicon, Intel</div>
+          <a href="https://github.com/just-not-google/BiNeuron/releases/download/v0.0.5/BiNeuron-Web-MacOS.zip" class="btn btn-primary download-btn" data-i18n="dl_btn">Download</a>
+        </div>
+        <div class="download-card">
+          <div class="os-name">Linux</div>
+          <div class="os-note" data-i18n="dl_linux">.AppImage and .deb</div>
+          <div class="os-desc" data-i18n="dl_linux_desc">Debian, Ubuntu, Arch</div>
+          <a href="https://github.com/just-not-google/BiNeuron/releases/download/v0.0.5/BiNeuron-Web-Linux.zip" class="btn btn-primary download-btn" data-i18n="dl_btn">Download</a>
+        </div>
+      </div>
+
+      <p class="download-foot" data-i18n="download_note">
+        Every release is built from source and signed. Choose the format that fits your workflow: a one-click installer for Windows, a native package for macOS, or a portable AppImage for Linux.
+      </p>
+
+      <div class="download-help">
+        <p data-i18n="download_help_text">
+          If a file does not download or you get an error, open the official releases page on GitHub and pick the right build for your platform manually.
+        </p>
+        <a href="https://github.com/just-not-google/BiNeuron/releases" target="_blank" rel="noopener" class="download-help-link" data-i18n="download_help_link">
+          Open releases on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">BiNeuron</div>
+        <div class="footer-tag" data-i18n="footer_tag">The safest local AI for developers</div>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/just-not-google/BiNeuron" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3z"/>
+          </svg>
+        </a>
+        <a href="https://x.com/BiNeuron123" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M18.9 2h3.7l-8.1 9.2L24 22h-7.4l-5.8-7.6L3.9 22H.2l8.6-9.8L0 2h7.6l5.3 6.9L18.9 2zm-1.3 18h2L6.5 3.9H4.4L17.6 20z"/>
+          </svg>
+        </a>
+        <a href="https://www.youtube.com/@bineuron" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+            <path d="M23.5 6.5a3 3 0 00-2.1-2.1C19.5 3.9 12 3.9 12 3.9s-7.5 0-9.4.5A3 3 0 00.5 6.5C0 8.4 0 12 0 12s0 3.6.5 5.5a3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1c.5-1.9.5-5.5.5-5.5s0-3.6-.5-5.5zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 BiNeuron · MIT License</div>
+  </div>
+</footer>
+
+<script>
+const TRANSLATIONS = {
+  en: {
+    nav_about: "About",
+    nav_download: "Download",
+    nav_docs: "Docs",
+    hero_title: "The safest local AI for your code",
+    hero_sub: "BiNeuron runs entirely on your machine by default. Your files, prompts, translations, and chat history never leave your computer. No telemetry, no tracking, no forced network calls. Cloud is opt-in only, and only when you enable it.",
+    btn_download: "Download for free",
+    btn_github: "View on GitHub",
+    about_title: "Why BiNeuron is the safest",
+    about_text: "A local-first AI assistant where every design decision prioritizes security, privacy, and control. Nothing reaches the network unless you say so.",
+    f1_title: "100% Local by Default",
+    f1_text: "GGUF models run entirely on your machine. No API keys, no accounts, no telemetry. Nothing leaves your computer unless you explicitly enable cloud mode.",
+    f2_title: "No Telemetry, No Trackers",
+    f2_text: "Zero analytics, zero tracking pixels, zero background pings. BiNeuron runs perfectly with the network cable unplugged.",
+    f3_title: "Sandboxed File Access",
+    f3_text: "Files are only read when you point BiNeuron at them. Automatic editing and deletion are off by default and must be enabled per session.",
+    f4_title: "Local OCR and Parsing",
+    f4_text: "Extracts text from PDF, DOCX, ODF, PPTX, XLSX, EPUB, MOBI, FB2 and images locally via EasyOCR, or through your own private DeepSeek OCR key.",
+    f5_title: "Virtual Storage, No Uploads",
+    f5_text: "Point BiNeuron at a folder. Files are read directly from your disk into the analysis context. Nothing is copied, uploaded, or cached outside your machine.",
+    f6_title: "Opt-in Cloud, Never Automatic",
+    f6_text: "Cloud inference through LiteLLM is strictly manual. Nothing is sent to any provider until you enter a cloud model name and your own API key.",
+    f7_title: "Inspect Everything Before Sending",
+    f7_text: "Preview the full system prompt, translated request, file context, and attached file list. See exactly what would leave your machine, byte for byte.",
+    f8_title: "Encrypted Chat History",
+    f8_text: "Protect conversations with a master password using Fernet and PBKDF2 with 200,000 iterations. Three wrong attempts wipe the key permanently.",
+    f9_title: "Anonymize and Filter",
+    f9_text: "Strip personal data with Microsoft Presidio and filter sensitive content before anything reaches a model. Both filters run entirely on your machine.",
+    f10_title: "No Forced Network Calls",
+    f10_text: "Proxies, mirrors, and network access are entirely under your control. BiNeuron never contacts any server unless you explicitly allow it.",
+    f11_title: "Fully Offline Translation",
+    f11_text: "Use Google Translate, DeepL, or fully offline ArgosTranslate. ArgosTranslate mode makes zero network requests at all.",
+    f12_title: "Hardened Interface",
+    f12_text: "Master password lock, opt-in file editing, explicit cloud fallback, and 24 dark themes with no external fonts, no CDN, and no third-party assets.",
+    download_title: "Download BiNeuron",
+    download_text: "Free and open source. No accounts, no sign-ups, no telemetry. Verify the code, build it yourself, and run a local AI on your own machine in under five minutes.",
+    download_note: "Every release is built from source and signed. Choose the format that fits your workflow: a one-click installer for Windows, a native package for macOS, or a portable AppImage for Linux.",
+    download_help_text: "If a file does not download or you get an error, open the official releases page on GitHub and pick the right build for your platform manually.",
+    download_help_link: "Open releases on GitHub",
+    dl_win: ".exe installer",
+    dl_win_desc: "Windows 10 and 11, 64 bit",
+    dl_mac: ".dmg package",
+    dl_mac_desc: "Apple Silicon, Intel",
+    dl_linux: ".AppImage and .deb",
+    dl_linux_desc: "Debian, Ubuntu, Arch",
+    dl_btn: "Download",
+    footer_tag: "The safest local AI for developers"
+  },
+  ru: {
+    nav_about: "О проекте",
+    nav_download: "Скачать",
+    nav_docs: "Документация",
+    hero_title: "Самый безопасный локальный ИИ для вашего кода",
+    hero_sub: "BiNeuron полностью работает на вашей машине по умолчанию. Файлы, запросы, переводы и история чатов не покидают ваш компьютер. Без телеметрии, без трекинга, без принудительных сетевых вызовов. Облако только по вашему явному включению.",
+    btn_download: "Скачать бесплатно",
+    btn_github: "Открыть на GitHub",
+    about_title: "Почему BiNeuron безопаснее всех",
+    about_text: "Локальный ИИ ассистент, в котором каждое решение ставит на первое место безопасность, приватность и контроль. Ничего не уходит в сеть, пока вы сами это не разрешите.",
+    f1_title: "100% Локально по умолчанию",
+    f1_text: "GGUF модели работают полностью на вашей машине. Без API ключей, без аккаунтов, без телеметрии. Ничего не покидает ваш компьютер, пока вы сами не включите облачный режим.",
+    f2_title: "Без телеметрии и трекеров",
+    f2_text: "Ноль аналитики, ноль трекинг-пикселей, ноль фоновых пингов. BiNeuron отлично работает даже с отключённым сетевым кабелем.",
+    f3_title: "Изолированный доступ к файлам",
+    f3_text: "Файлы читаются только тогда, когда вы сами укажете их BiNeuron. Автоматическое редактирование и удаление отключены по умолчанию и включаются отдельно на сессию.",
+    f4_title: "Локальный OCR и парсинг",
+    f4_text: "Извлекает текст из PDF, DOCX, ODF, PPTX, XLSX, EPUB, MOBI, FB2 и изображений локально через EasyOCR или через ваш собственный ключ DeepSeek OCR.",
+    f5_title: "Виртуальное хранилище без загрузок",
+    f5_text: "Укажите BiNeuron на папку. Файлы читаются напрямую с диска в контекст анализа. Ничего не копируется, не загружается и не кэшируется вне вашей машины.",
+    f6_title: "Облако только вручную",
+    f6_text: "Облачный инференс через LiteLLM строго вручную. Ничего не отправляется провайдеру, пока вы сами не введёте имя облачной модели и свой API ключ.",
+    f7_title: "Полный предпросмотр запроса",
+    f7_text: "Просмотр полного системного промпта, переведённого запроса, контекста файлов и списка вложений. Вы точно видите, что покинет вашу машину, до байта.",
+    f8_title: "Зашифрованная история чатов",
+    f8_text: "История диалогов защищена мастер паролем через Fernet и PBKDF2 с 200 000 итераций. Три неверных попытки навсегда удаляют ключ.",
+    f9_title: "Анонимизация и фильтрация",
+    f9_text: "Удаляет персональные данные через Microsoft Presidio и фильтрует чувствительный контент до отправки в модель. Оба фильтра работают полностью на вашей машине.",
+    f10_title: "Без принудительных сетевых вызовов",
+    f10_text: "Прокси, зеркала и сетевой доступ полностью под вашим контролем. BiNeuron не обращается ни к какому серверу, пока вы сами это не разрешите.",
+    f11_title: "Полностью офлайн перевод",
+    f11_text: "Google Translate, DeepL или полностью офлайн ArgosTranslate. Режим ArgosTranslate делает ноль сетевых запросов.",
+    f12_title: "Укреплённый интерфейс",
+    f12_text: "Мастер-пароль, редактирование файлов только по включению, облако только вручную, 24 тёмные темы без внешних шрифтов, CDN и сторонних ресурсов.",
+    download_title: "Скачать BiNeuron",
+    download_text: "Бесплатный проект с открытым исходным кодом. Без аккаунтов, без регистрации, без телеметрии. Проверьте код, соберите сами и запустите локальный ИИ на своей машине меньше чем за пять минут.",
+    download_note: "Каждый релиз собирается из исходников и подписывается. Выберите подходящий формат: установщик в один клик для Windows, нативный пакет для macOS или портативный AppImage для Linux.",
+    download_help_text: "Если файл не скачивается или появляется ошибка, откройте официальную страницу релизов на GitHub и выберите сборку для вашей платформы вручную.",
+    download_help_link: "Открыть релизы на GitHub",
+    dl_win: ".exe установщик",
+    dl_win_desc: "Windows 10 и 11, 64 бита",
+    dl_mac: ".dmg пакет",
+    dl_mac_desc: "Apple Silicon, Intel",
+    dl_linux: ".AppImage и .deb",
+    dl_linux_desc: "Debian, Ubuntu, Arch",
+    dl_btn: "Скачать",
+    footer_tag: "Самый безопасный локальный ИИ для разработчиков"
+  },
+  zh: {
+    nav_about: "关于",
+    nav_download: "下载",
+    nav_docs: "文档",
+    hero_title: "为你的代码打造的最安全的本地 AI",
+    hero_sub: "BiNeuron 默认完全在你的机器上运行。文件、提示、翻译和对话历史永远不会离开你的电脑。没有遥测，没有跟踪，没有强制网络请求。云端仅在你自行启用时才会使用。",
+    btn_download: "免费下载",
+    btn_github: "在 GitHub 上查看",
+    about_title: "为什么 BiNeuron 最安全",
+    about_text: "一个本地优先的 AI 助手，每个设计决策都以安全、隐私和控制为先。除非你明确允许，否则不会有任何内容进入网络。",
+    f1_title: "默认完全本地",
+    f1_text: "GGUF 模型完全在你的机器上运行。无 API 密钥、无账号、无遥测。除非你明确启用云模式，否则不会有任何内容离开你的电脑。",
+    f2_title: "无遥测，无跟踪",
+    f2_text: "零分析、零跟踪像素、零后台请求。即使拔掉网线，BiNeuron 也能完美运行。",
+    f3_title: "隔离的文件访问",
+    f3_text: "只有你主动指定时，BiNeuron 才会读取文件。自动编辑和删除默认关闭，必须按会话手动启用。",
+    f4_title: "本地 OCR 与解析",
+    f4_text: "通过 EasyOCR 本地从 PDF、DOCX、ODF、PPTX、XLSX、EPUB、MOBI、FB2 和图像中提取文本，或使用你自己的 DeepSeek OCR 密钥。",
+    f5_title: "虚拟存储，无上传",
+    f5_text: "将 BiNeuron 指向一个文件夹，文件直接从磁盘读入分析上下文。不会复制、上传或缓存到你的机器之外。",
+    f6_title: "云端严格手动",
+    f6_text: "通过 LiteLLM 的云端推理严格手动。在你亲自输入云模型名称和 API 密钥之前，不会向任何提供商发送任何内容。",
+    f7_title: "发送前完整预览",
+    f7_text: "预览完整的系统提示、翻译后的请求、文件上下文和附件列表。逐字节看到什么会离开你的机器。",
+    f8_title: "加密对话历史",
+    f8_text: "使用主密码保护对话历史，采用 Fernet 和 PBKDF2，200,000 次迭代。三次错误输入将永久删除密钥。",
+    f9_title: "匿名化与过滤",
+    f9_text: "在内容到达模型之前，使用 Microsoft Presidio 去除个人数据并过滤敏感内容。两个过滤器都在你的机器上本地运行。",
+    f10_title: "无强制网络请求",
+    f10_text: "代理、镜像和网络访问完全由你控制。除非你明确允许，BiNeuron 不会联系任何服务器。",
+    f11_title: "完全离线翻译",
+    f11_text: "使用 Google Translate、DeepL 或完全离线的 ArgosTranslate。ArgosTranslate 模式完全不发起任何网络请求。",
+    f12_title: "强化的界面",
+    f12_text: "主密码锁定、按需启用的文件编辑、手动云端回退，24 款深色主题，无外部字体、无 CDN、无第三方资源。",
+    download_title: "下载 BiNeuron",
+    download_text: "免费且开源。无需注册，无需订阅，无遥测。审核代码，自行构建，五分钟内在你自己的机器上运行本地 AI。",
+    download_note: "每个版本都从源码构建并签名。选择适合你工作流的格式：Windows 一键安装包、macOS 原生包，或 Linux 便携 AppImage。",
+    download_help_text: "如果文件无法下载或出现错误，请打开 GitHub 官方发布页面，手动选择适合你平台的版本。",
+    download_help_link: "打开 GitHub 发布页面",
+    dl_win: ".exe 安装包",
+    dl_win_desc: "Windows 10 和 11，64 位",
+    dl_mac: ".dmg 包",
+    dl_mac_desc: "Apple Silicon，Intel",
+    dl_linux: ".AppImage 和 .deb",
+    dl_linux_desc: "Debian，Ubuntu，Arch",
+    dl_btn: "下载",
+    footer_tag: "面向开发者的最安全本地 AI"
+  }
+};
+
+const buttons = document.querySelectorAll(".lang-switch button");
+
+function applyLang(lang) {
+  const dict = TRANSLATIONS[lang] || TRANSLATIONS.en;
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(function (el) {
+    const key = el.dataset.i18n;
+    if (dict[key]) el.textContent = dict[key];
+  });
+  buttons.forEach(function (btn) {
+    btn.classList.toggle("active", btn.dataset.lang === lang);
+  });
+  try { localStorage.setItem("bineuron_lang", lang); } catch (e) {}
+}
+
+buttons.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    applyLang(btn.dataset.lang);
+  });
+});
+
+(function initLang() {
+  let saved = null;
+  try { saved = localStorage.getItem("bineuron_lang"); } catch (e) {}
+  if (saved && TRANSLATIONS[saved]) return applyLang(saved);
+  const b = (navigator.language || "en").slice(0, 2).toLowerCase();
+  if (b === "ru") applyLang("ru");
+  else if (b === "zh") applyLang("zh");
+  else applyLang("en");
+})();
+
+(function initBinary() {
+  const canvas = document.getElementById("binaryCanvas");
+  if (!canvas) return;
+
+  const ctx = canvas.getContext("2d");
+  let width, height, columns, drops;
+  const fontSize = 16;
+  const chars = ["0", "1"];
+
+  function setup() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    columns = Math.floor(width / fontSize);
+    drops = new Array(columns).fill(0).map(function () {
+      return Math.random() * -50;
+    });
+  }
+
+  function draw() {
+    ctx.fillStyle = "rgba(13, 16, 20, 0.08)";
+    ctx.fillRect(0, 0, width, height);
+
+    ctx.font = fontSize + "px monospace";
+    for (let i = 0; i < drops.length; i++) {
+      const char = chars[Math.floor(Math.random() * chars.length)];
+      const x = i * fontSize;
+      const y = drops[i] * fontSize;
+
+      const fade = 1 - (y / height);
+      const alpha = Math.max(0.05, Math.min(0.5, fade * 0.6));
+
+      ctx.fillStyle = "rgba(74, 158, 255, " + alpha + ")";
+      ctx.fillText(char, x, y);
+
+      if (y > height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  setup();
+  window.addEventListener("resize", setup);
+
+  let last = 0;
+  function loop(t) {
+    if (t - last > 55) {
+      draw();
+      last = t;
+    }
+    requestAnimationFrame(loop);
+  }
+
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce) {
+    draw();
+  } else {
+    requestAnimationFrame(loop);
+  }
+})();
+</script>
+
+</body>
+</html>
